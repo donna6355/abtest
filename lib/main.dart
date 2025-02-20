@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:performance/widget_screen.dart';
 import 'img_gradient/gradient_screen.dart';
 import 'img_gradient/img_screen.dart';
 import 'img_gradient/img_gradient_screen.dart';
@@ -51,6 +52,7 @@ class MyApp extends StatelessWidget {
                   builder: (_, __) => const MultiGradientScreen()),
             ],
           ),
+          GoRoute(path: '/widgets', builder: (_, __) => const WidgetScreen()),
         ],
       ),
     );
@@ -69,6 +71,10 @@ class MainScreen extends StatelessWidget {
           ElevatedButton(
             onPressed: () => context.push('/imgGradient'),
             child: const Text('Img vs Gradient'),
+          ),
+          ElevatedButton(
+            onPressed: () => context.push('/widgets'),
+            child: const Text('Unfamilita Widgets'),
           ),
         ],
       ),
